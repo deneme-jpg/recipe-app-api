@@ -30,7 +30,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     """custom User model that support using email instead of username"""
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
-    password = models.CharField(max_length=32)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
